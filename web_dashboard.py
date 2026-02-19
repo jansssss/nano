@@ -721,16 +721,28 @@ function addLog(step, total, msg, isDone) {
   logBox.scrollTop = logBox.scrollHeight;
 }
 
-const es = new EventSource('/stream');
-es.onmessage = (e) => {
-  const data = JSON.parse(e.data);
-  const pct = (data.step / data.total * 100).toFixed(0);
+const STEPS = [
+  "엑셀 파일 로딩 중...",
+  "예산 총괄표 분석 중...",
+  "수입예산 과목별 파싱 중...",
+  "지출예산 성질별 데이터 처리 중...",
+  "나노센터 직접 지출 분석 중...",
+  "핵심 재무 지표 계산 중...",
+  "전년 대비 증감률 산출 중...",
+  "위험 요인 분석 중...",
+  "전략적 제언 생성 중...",
+  "대시보드 렌더링 완료!",
+];
+let currentStep = 0;
+const timer = setInterval(() => {
+  currentStep++;
+  const pct = (currentStep / STEPS.length * 100).toFixed(0);
   progBar.style.width = pct + '%';
-  progLabel.textContent = `${data.step} / ${data.total}`;
-  addLog(data.step, data.total, data.message, data.done);
+  progLabel.textContent = `${currentStep} / ${STEPS.length}`;
+  addLog(currentStep, STEPS.length, STEPS[currentStep - 1], currentStep === STEPS.length);
 
-  if (data.done) {
-    es.close();
+  if (currentStep >= STEPS.length) {
+    clearInterval(timer);
     spinner.style.display = 'none';
     setTimeout(() => {
       document.getElementById('loading-panel').style.display = 'none';
@@ -742,8 +754,7 @@ es.onmessage = (e) => {
       initDashboard();
     }, 600);
   }
-};
-es.onerror = () => es.close();
+}, 350);
 
 /* ── Dashboard Init ── */
 function initDashboard() {
