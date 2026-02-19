@@ -526,7 +526,7 @@ DASHBOARD_HTML = r"""<!DOCTYPE html>
 <header class="header">
   <div class="header-left">
     <h1>나노센터 예산 분석 대시보드</h1>
-    <p>2025년도 예산 vs 전년도 비교 분석 &nbsp;|&nbsp; 생성일: 2026-02-19</p>
+    <p>2026년도 예산 vs 전년도 비교 분석 &nbsp;|&nbsp; 생성일: 2026-02-19</p>
   </div>
   <div class="header-badges">
     <span class="badge badge-blue">2025 예산 (나노센터 전용)</span>
@@ -663,7 +663,7 @@ DASHBOARD_HTML = r"""<!DOCTYPE html>
 </div><!-- /#dashboard -->
 
 <footer class="footer">
-  나노센터 예산 분석 시스템 &nbsp;|&nbsp; 2025년도 예산 기준 &nbsp;|&nbsp; Flask + Chart.js
+  나노센터 예산 분석 시스템 &nbsp;|&nbsp; 2026년도 예산 기준 &nbsp;|&nbsp; Flask + Chart.js
 </footer>
 
 <!-- ════════════════════════════════════════════════
