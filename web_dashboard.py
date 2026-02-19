@@ -115,7 +115,7 @@ DASHBOARD_HTML = r"""<!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>나노센터 예산 분석 대시보드 2025</title>
+<title>나노센터 예산 분석 대시보드 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
@@ -529,7 +529,7 @@ DASHBOARD_HTML = r"""<!DOCTYPE html>
     <p>2026년도 예산 vs 전년도 비교 분석 &nbsp;|&nbsp; 생성일: 2026-02-19</p>
   </div>
   <div class="header-badges">
-    <span class="badge badge-blue">2025 예산 (나노센터 전용)</span>
+    <span class="badge badge-blue">2026 예산 (나노센터 전용)</span>
     <span class="badge badge-green">흑자 +5.4억</span>
     <span class="badge badge-green">실시간 분석</span>
   </div>
